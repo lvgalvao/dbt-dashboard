@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: investimentos
+    schema: public
+    description: Dados das notas das corretoras após ingestão
+    tables:
+      - name: fatura_jornada
+      - name: fatura_jornada_small
+      - name: fatura_redrex
+      - name: fatura_redrex_small
