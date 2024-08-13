@@ -1,0 +1,96 @@
+[0m17:03:01.913513 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CAB0E0410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CAAEF7250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CAAEF5FD0>]}
+
+
+============================== 17:03:01.944948 | ccdc2cb6-61fe-4ef6-ada6-0e86733502f9 ==============================
+[0m17:03:01.944948 [info ] [MainThread]: Running with dbt=1.8.5
+[0m17:03:01.945947 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Luciano\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m17:03:16.007212 [debug] [MainThread]: Starter project path: C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\include\starter_project
+[0m17:03:16.038252 [info ] [MainThread]: 
+Your new dbt project "dbt_live" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:03:16.039253 [info ] [MainThread]: Setting up your profile.
+[0m17:03:55.654172 [error] [MainThread]: Encountered an error:
+
+[0m17:03:55.656172 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\cli\main.py", line 470, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\task\init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\task\init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m17:03:55.658173 [debug] [MainThread]: Command `dbt init` failed at 17:03:55.658173 after 53.79 seconds
+[0m17:03:55.658173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CAB1222D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CA37D43D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CAAAAE610>]}
+[0m17:03:55.659677 [debug] [MainThread]: Flushing usage events
+[0m17:03:58.916880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A8281F610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A8281F510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A82824050>]}
+
+
+============================== 17:03:58.919879 | da28d88b-03ea-4ee6-a666-6f24e1b341fc ==============================
+[0m17:03:58.919879 [info ] [MainThread]: Running with dbt=1.8.5
+[0m17:03:58.920387 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Luciano\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m17:04:00.749420 [info ] [MainThread]: A project called dbt_live already exists here.
+[0m17:04:00.751427 [debug] [MainThread]: Command `dbt init` succeeded at 17:04:00.750428 after 1.88 seconds
+[0m17:04:00.751427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A82884710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AFC2B43D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025A82855D50>]}
+[0m17:04:00.751427 [debug] [MainThread]: Flushing usage events
+[0m17:04:08.379713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153107AFA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015310807C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015310806E90>]}
+
+
+============================== 17:04:08.383223 | 402dfafa-fb3d-423d-8645-6c8317893488 ==============================
+[0m17:04:08.383223 [info ] [MainThread]: Running with dbt=1.8.5
+[0m17:04:08.383223 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Luciano\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:04:09.829734 [debug] [MainThread]: Starter project path: C:\Users\Luciano\workspace\lvgalvaofilho\dbt-dashboard\.venv\Lib\site-packages\dbt\include\starter_project
+[0m17:04:09.846367 [info ] [MainThread]: 
+Your new dbt project "dbt_live" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:04:09.847366 [info ] [MainThread]: Setting up your profile.
+[0m17:04:50.991536 [info ] [MainThread]: Profile dbt_live written to C:\Users\Luciano\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:04:50.992536 [debug] [MainThread]: Command `dbt init` succeeded at 17:04:50.992536 after 42.66 seconds
+[0m17:04:50.993537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001530A2243D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001530A51B210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000153105877D0>]}
+[0m17:04:50.993537 [debug] [MainThread]: Flushing usage events

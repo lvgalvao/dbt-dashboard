@@ -3,7 +3,7 @@ WITH fatura_redrex AS (
         n_nota,
         data_de_pregao,
         qted,
-        merc,
+        mercadoria,
         txop,
         cotacao
     FROM
@@ -24,7 +24,7 @@ kpi_calculated AS (
         r.n_nota,
         r.data_de_pregao,
         r.qted,
-        r.merc,
+        r.mercadoria,
         r.txop,
         s.tx_corretagem,
         r.cotacao,

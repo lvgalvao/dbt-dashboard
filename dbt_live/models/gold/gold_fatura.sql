@@ -3,7 +3,7 @@ WITH cte_silver_fatura_jornada AS (
         n_nota,
         data_de_pregao,
         qted,
-        merc,
+        mercadoria,
         txop,
         tx_corretagem,
         cotacao,
@@ -17,7 +17,7 @@ cte_silver_fatura_redrex AS (
         n_nota,
         data_de_pregao,
         qted,
-        merc,
+        mercadoria,
         txop,
         tx_corretagem,
         cotacao,
@@ -32,4 +32,4 @@ FROM cte_silver_fatura_jornada
 UNION ALL
 
 SELECT * 
-FROM cte_silver_fatura_jornada
+FROM cte_silver_fatura_redrex
