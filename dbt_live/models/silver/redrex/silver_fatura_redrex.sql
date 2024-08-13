@@ -1,5 +1,6 @@
 WITH fatura_redrex AS (
     SELECT
+        cv,
         n_nota,
         data_de_pregao,
         qted,
@@ -21,6 +22,7 @@ fatura_redrex_small AS (
 
 kpi_calculated AS (
     SELECT
+        r.cv,
         r.n_nota,
         r.data_de_pregao,
         r.qted,
@@ -28,7 +30,11 @@ kpi_calculated AS (
         r.txop,
         s.tx_corretagem,
         r.cotacao,
-        (r.qted * r.cotacao * (1 - (s.tx_corretagem + r.txop) / 100)) AS movimentacao
+        CASE 
+            WHEN r.cv = 'C' THEN -ROUND((r.qted * r.cotacao * (1 - (s.tx_corretagem + r.txop) / 100)), 2)
+            WHEN r.cv = 'V' THEN ROUND((r.qted * r.cotacao * (1 - (s.tx_corretagem + r.txop) / 100)), 2)
+            ELSE 0 -- Valor padrão caso cv não seja 'C' nem 'V'
+        END AS movimentacao
     FROM
         fatura_redrex r
     JOIN
