@@ -1,5 +1,6 @@
 WITH cte_silver_fatura_jornada AS (
     SELECT
+        cv,
         n_nota,
         data_de_pregao,
         qted,
@@ -14,6 +15,7 @@ WITH cte_silver_fatura_jornada AS (
 
 cte_silver_fatura_redrex AS (
     SELECT
+        cv,
         n_nota,
         data_de_pregao,
         qted,
